@@ -1,0 +1,53 @@
+﻿<Window x:Class="Supermarket.AddDiscountWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Add Discount" Height="400" Width="400"
+        WindowStartupLocation="CenterScreen">
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Label Content="Discount Name:" Grid.Row="0" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="DiscountNameTextBox" Grid.Row="0" Grid.Column="1" Margin="5"/>
+
+        <Label Content="Discount Type:" Grid.Row="1" Grid.Column="0" Margin="5"/>
+        <ComboBox x:Name="DiscountTypeComboBox" Grid.Row="1" Grid.Column="1" Margin="5">
+            <ComboBoxItem Content="Percentage"/>
+            <ComboBoxItem Content="Fixed"/>
+        </ComboBox>
+
+        <Label Content="Discount Value:" Grid.Row="2" Grid.Column="0" Margin="5"/>
+        <TextBox x:Name="DiscountValueTextBox" Grid.Row="2" Grid.Column="1" Margin="5"/>
+
+        <Label Content="Start Date:" Grid.Row="3" Grid.Column="0" Margin="5"/>
+        <DatePicker x:Name="StartDatePicker" Grid.Row="3" Grid.Column="1" Margin="5"/>
+
+        <Label Content="End Date:" Grid.Row="4" Grid.Column="0" Margin="5"/>
+        <DatePicker x:Name="EndDatePicker" Grid.Row="4" Grid.Column="1" Margin="5"/>
+
+        <Label Content="Product:" Grid.Row="5" Grid.Column="0" Margin="5"/>
+        <ComboBox x:Name="ProductComboBox" Grid.Row="5" Grid.Column="1" Margin="5" DisplayMemberPath="ProductName" SelectedValuePath="ProductID"/>
+
+        <Label Content="Category:" Grid.Row="6" Grid.Column="0" Margin="5"/>
+        <ComboBox x:Name="CategoryComboBox" Grid.Row="6" Grid.Column="1" Margin="5" DisplayMemberPath="CategoryName" SelectedValuePath="CategoryID"/>
+
+        <StackPanel Grid.Row="7" Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" Margin="5">
+            <Button Content="Save" Margin="5" Width="100" Click="SaveButton_Click"/>
+            <Button Content="Cancel" Margin="5" Width="100" Click="CancelButton_Click"/>
+        </StackPanel>
+
+    </Grid>
+</Window>

@@ -1,0 +1,21 @@
+﻿<UserControl x:Class="Supermarket.ReportsView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <StackPanel>
+            <TextBlock Text="Sales Report" FontSize="18" FontWeight="Bold" Margin="10"/>
+            <Button Content="Generate Sales Report (PDF)" Margin="10"/>
+            <Button Content="Generate Sales Report (Excel)" Margin="10"/>
+
+            <TextBlock Text="Inventory Report" FontSize="18" FontWeight="Bold" Margin="10"/>
+            <Button Content="Generate Inventory Report (PDF)" Margin="10"/>
+            <Button Content="Generate Inventory Report (Excel)" Margin="10"/>
+
+            <!-- Add other report types -->
+        </StackPanel>
+    </Grid>
+</UserControl>

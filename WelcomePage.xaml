@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="Supermarket.Views.WelcomePage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    Background="White">
+
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <!-- Logo Image -->
+            <Image Source="Images/logo.png" Width="150" Height="150" Margin="0,0,0,10"/>
+
+            <!-- Welcome Text -->
+            <TextBlock Text="Welcome to Supermarket Management System"
+                       FontSize="24"
+                       FontWeight="Bold"
+                       Foreground="#3498DB"
+                       TextAlignment="Center"/>
+        </StackPanel>
+    </Grid>
+</UserControl>

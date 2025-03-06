@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="Supermarket.InventoryView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:local="clr-namespace:Supermarket"
+             mc:Ignorable="d"
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Orientation="Horizontal" Margin="5">
+            <Button Content="Refresh" Margin="5" Padding="5" Click="RefreshButton_Click"/>
+            <Button Content="Add Product" Margin="5" Padding="5" Click="AddProductButton_Click"/>
+            <Button Content="Update Product" Margin="5" Padding="5" Click="UpdateProductButton_Click"/>
+            <Button Content="Remove" Margin="5" Padding="5" Click="RemoveProductButton_Click"/>
+            <TextBox x:Name="SearchTextBox" Width="150" Margin="5,0"  ToolTip="Search by Name or ID"/>
+            <Button Content="Search" Margin="5" Padding="5" Click="SearchButton_Click"/>
+        </StackPanel>
+
+        <DataGrid Grid.Row="1" x:Name="InventoryDataGrid" AutoGenerateColumns="False">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Product ID" Binding="{Binding ProductID}"/>
+                <DataGridTextColumn Header="Product Name" Binding="{Binding ProductName}"/>
+                <DataGridTextColumn Header="Category" Binding="{Binding Category.CategoryName}"/>
+                <DataGridTextColumn Header="Quantity" Binding="{Binding StockQuantity}"/>
+                <DataGridTextColumn Header="Supplier" Binding="{Binding Supplier.SupplierName}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</UserControl>
